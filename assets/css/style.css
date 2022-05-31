@@ -23,9 +23,14 @@ body {
     animation: backgroundTransition 8s ease-in-out infinite;
 }
 
-h1, h2 {
+h1, h2, h3 {
     text-transform: uppercase;
     letter-spacing: 4px;
+}
+
+h3 {
+    text-align: center;
+    max-width: 50%;
 }
 
 .social-media {
@@ -214,11 +219,10 @@ a:hover {
     width: 90%;
 }
 
-.card {
+.card-github, .card-linkedin {
     height: 300px;
     width: 400px;
     margin: 3rem 0 0;
-    background-image: url('./wooden-table-coffee.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -230,6 +234,14 @@ a:hover {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 5%;
+}
+
+.card-github {
+    background-image: url('../img/wooden-table-coffee.jpg');
+}
+
+.card-linkedin {
+    background-image: url('../img/matheus.jpeg');
 }
 
 .card-text {
@@ -276,17 +288,19 @@ a:hover {
     transition: 0.3s;
 }
 
-.card:hover {
+.card-github:hover, .card-linkedin:hover {
     filter: unset;
 }
 
-.card:hover > .card-wrapper::before {
+.card-github:hover > .card-wrapper::before,
+.card-linkedin > .card-wrapper::before {
     opacity: 1;
     width: 350px;
     height: 250px;
 }
 
-.card:hover > .card-wrapper p {
+.card-github:hover > .card-wrapper p,
+.card-linkedin:hover > .card-wrapper p {
     font-size: 14px;
     opacity: 1;
     visibility: visible;
@@ -341,7 +355,7 @@ a:hover {
         width: 190px;
     }
 
-    h1, h2 {
+    h1, h2, .footer {
         text-align: center;
     }
 }
